@@ -28,7 +28,7 @@ def derivative_minim_sub(y_sub, X_sub, X_subT, G_selected, A_selc, subsample_siz
   C_invResid = sgemm(alpha=1,a=C_inv,b=residual,trans_b=0)
   qf = sgemm(alpha=1,a=residual,b=C_invResid,trans_a=1)
   diff1 = np.sum(np.multiply(C_inv, A_selc))-subsample_size/qf*sgemm(alpha=1,a=C_invResid.T,b=sgemm(alpha=1,a=A_selc,b=C_invResid))
-  print(h)
+  #print(h)
   return(diff1)
 
  start_time = time.time()
@@ -68,7 +68,7 @@ def derivative_minim_full(y, X, X_T, Ct, id_diag, add, G_selected, GRM_array, N)
   qf = sgemm(alpha=1,a=residual,b=C_invResid,trans_a=0)
   diff1 = np.sum(np.multiply(C_inv, GRM_array))-N/qf*sgemm(alpha=1,a=C_invResid.T,b=sgemm(alpha=1,a=GRM_array,b=C_invResid))
   del C_inv,addedId,addedId_invU,CTadded_Id_invC
-  print(h)
+  #print(h)
   return(diff1)
 
  start_time = time.time()
