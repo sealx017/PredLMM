@@ -22,7 +22,7 @@ In PredLMM_notebook, we estimate the heritability and variance of the phenotype 
 * by fitting a LMM with a random subsample (of size subsample_size) and 
 * by fitting the actual PredLMM algorithm treating the selected random subsample as the set of knots.
 
-In our example, we considered the subsample_size to be 500. One can change that depending upon the total number of individuals. 
+In our example, we considered the subsample_size (size of the set of knots) to be 500. One can change that depending upon the total population size. We have seen using 10% of the total population size as subsample_size works reliably. 
 
 
 
