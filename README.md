@@ -28,5 +28,7 @@ In PredLMM_notebook, we estimate the heritability and variance of the phenotype 
 
 In our example, we considered the subsample_size (size of the set of knots) to be 500. One can change that depending upon the total population size. We have seen using 10% of the total population size as subsample_size works reliably. 
 
+Along with the estimates, we also display the time taken by both the approaches.
+
 
 
