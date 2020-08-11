@@ -1,5 +1,9 @@
 # PredLMM
 
+## Notebook Description
+
+The jupyter notebook titled as PredLMM_notebook contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The main module containing all the necessary python functions can be found inside the folder PredLMM.
+
 ## Data Description
 
 The example data files provided are generated following the simulation of section (3.2.1) of the main manuscript. In the folder named "Data", there are 
@@ -13,7 +17,7 @@ There are 5000 many individuals and 10,000 many SNPs. First two columns of the p
 There are only one phenotype and one single covariate (intercept term). With the binary files, Genetic Relationship Matrix (GRM) files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same.
 
 
-## Code Usage
+## Code Description
 
 In a general scenario, one should compute the GRM files first with the PLINK Binary files using GCTA software. Then, follow the jupyter notebook: PredLMM_notebook for estimating heribaility and variance of a phenotype adjusting the availble covariates. 
 
