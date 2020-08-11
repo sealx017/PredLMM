@@ -2,7 +2,7 @@
 
 ## Data Description
 
-The example data files provided are generated following the simumlation of section (3.2.1) of the main manuscript. In the folder named "Data", there are 
+The example data files provided are generated following the simulation of section (3.2.1) of the main manuscript. In the folder named "Data", there are 
 
 * a phenotype file: "example_pheno.csv"
 * a covariate file: "example_covar.csv"
@@ -16,6 +16,13 @@ There are only one phenotype and one single covariate (intercept term). With the
 ## Code Usage
 
 In a general scenario, one should compute the GRM files first with the PLINK Binary files using GCTA software. Then, follow the jupyter notebook: PredLMM_notebook for estimating heribaility and variance of a phenotype adjusting the availble covariates. 
+
+In PredLMM_notebook, we estimate the heritability and variance of the phenotype twice:
+
+* by fitting a LMM with a random subsample (of size subsample_size) and 
+* by fitting the actual PredLMM algorithm treating the selected random subsample as the set of knots.
+
+In our example, we considered the subsample_size to be 500. One can change that depending upon the total number of individuals. 
 
 
 
