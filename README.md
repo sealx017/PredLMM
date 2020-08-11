@@ -2,7 +2,7 @@
 
 ## Notebook Description
 
-The jupyter notebook titled as PredLMM_notebook contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The main module containing all the necessary python functions can be found inside the folder PredLMM.
+The jupyter notebook titled as PredLMM_notebook contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The main module containing all the necessary python functions can be found inside the folder "PredLMM".
 
 ## Data Description
 
