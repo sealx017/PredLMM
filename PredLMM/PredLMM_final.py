@@ -40,7 +40,7 @@ def derivative_minim_sub(y_sub, X_sub, X_subT, G_selected, A_selc, subsample_siz
     pc_minimizer_easy = 1   
  if pc_minimizer_easy<0:
     pc_minimizer_easy = 0
- h = pc_minimizer_easy
+ h = pc_minimizer_easy.round(4)
  C_inv = inv(h*G_selected+(1-h)*Identity(subsample_size))
  C_invX = sgemm(alpha=1,a=C_inv,b=X_sub)
  beta = sgemm(alpha=1,a=inv(sgemm(alpha=1,a=X_subT.reshape(1,subsample_size),b=C_invX)),b=sgemm(alpha=1,a=C_invX,b=y_sub,trans_a=1))
@@ -54,7 +54,7 @@ def derivative_minim_sub(y_sub, X_sub, X_subT, G_selected, A_selc, subsample_siz
  sd_sub = np.sqrt(2/a)
  t1 = (time.time() - start_time)
  #result = np.hstack((np.asscalar(pc_minimizer_easy),np.asscalar(sd_sub),np.asscalar(sigma),t1))
- result = {'Heritability estimate':np.asscalar(pc_minimizer_easy), 'SD of heritability estimate':np.asscalar(sd_sub), 'Variance estimate':  np.asscalar(sigma), 'Time taken':t1}
+ result = {'Heritability estimate': h, 'SD of heritability estimate': sd_sub.round(4), 'Variance estimate':    np.asscalar(sigma.round(4)), 'Time taken': (np.array(t1).round(4)).item()}
  return(result)
 
 
@@ -101,10 +101,10 @@ def derivative_minim_full(y, X, X_T, Ct, id_diag, add, G_selected, GRM_array, N)
  GRM_array= sgemm(alpha=1,a=C_inv,b=GRM_array) #V_pp^-1 A_ppc
  W = np.maximum(GRM_array, GRM_array.transpose())
  a = np.sum(np.multiply(W,W))
- print(a)
+ #print(a)
  del C_inv;
  sd = np.sqrt(2/a)
  t1 = (time.time() - start_time)
  #result = np.hstack((np.asscalar(pc_minimizer_f),np.asscalar(sd),np.asscalar(sigma),t1))
- result = {'Heritability estimate':np.asscalar(pc_minimizer_f), 'SD of heritability estimate':np.asscalar(sd), 'Variance estimate':  np.asscalar(sigma), 'Time taken':t1}
+ result = {'Heritability estimate': (np.array(h).round(4)).item(), 'SD of heritability estimate': sd.round(4), 'Variance estimate':    np.asscalar(sigma.round(4)), 'Time taken': (np.array(t1).round(4)).item()}
  return(result)
