@@ -15,8 +15,8 @@ The example data files provided are generated following the Section simulation s
 
 * a phenotype file: "example_pheno.csv"
 * a covariate file: "example_covar.csv"
-* PLINK Binary files: "example_geno"
-* GCTA GRM files: "example_grm"
+* PLINK Binary files: "example_geno" (.bed, .bim, .fam)
+* GCTA GRM files: "example_grm" (.bin)
 
 There are 5000 individuals and 10,000 SNPs. First two columns of the phenotype and covariate file have the family ID (FID) and individual ID (IID) of each individual. There are only one phenotype and one single covariate (intercept term). With the binary files, Genetic Relationship Matrix (GRM) files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same.
 
