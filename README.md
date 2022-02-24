@@ -27,16 +27,15 @@ The file "weights.all" contains the LD-based weights of every SNP computed using
 
 ## Code Description
 
-In a general scenario, one should compute the GRM files first with the PLINK Binary files using GCTA software. Then, follow the jupyter notebook: PredLMM_notebook for estimating heribaility and variance of a phenotype adjusting the availble covariates. 
+In most cases, one should compute the GRM files first with the binary files using the GCTA software. Then, follow the jupyter notebook, "PredLMM_notebook" for estimating heribaility and variance of a phenotype adjusting for the availble covariates. However, it would be worth using "PredLMM_notebook_with_GRM_computation_included" for a more streamlined analysis without needing to use the GCTA software and for incorporating special SNP-weights in the GRM computation. The weights need to be pre-computed and provided separately.
 
-In PredLMM_notebook, we estimate the heritability and variance of the phenotype twice:
+In both the notebooks, we estimate the heritability and variance of the phenotype twice:
 
-* by fitting a LMM with a random subsample (of size subsample_size) and 
-* by fitting the actual PredLMM algorithm treating the selected random subsample as the set of knots.
+* first, by fitting a LMM only with a random subsample of the individuals (the size of which can be varied by the user) and 
+* second, by fitting the PredLMM algorithm treating the selected subsample as the set of knots.
 
-In our example, we considered the subsample_size (size of the set of knots) to be 500. One can change that depending upon the total population size. We have seen using 10% of the total population size as subsample_size works reliably. 
+In our example, we considered the subsample_size (size of the set of knots) to be 1000. One can change the size depending upon the total population size. We have found using 20% of the total population size to be reliable. 
 
-Along with the estimates, we also display the time taken by both the approaches.
 
 ### References
 
