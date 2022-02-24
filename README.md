@@ -11,13 +11,13 @@
 
 ## Data Description
 
-The example data files provided are generated following the Section simulation study 1 of the main manuscript. In the folder named "Data", there are, 
+The example data files provided are generated following the Section simulation study 1 of the main manuscript. In the folder named "Data", there are multiple files, 
 
 * a phenotype file: example_pheno.csv
 * a covariate file: example_covar.csv
 * PLINK Binary files: example_geno (.bed, .bim, .fam)
 * GCTA GRM files: example_grm (.grm.id, .grm.bin, .grm.N.bin)
-* LD-based SNP-weights: weights.all
+* LD-based SNP-weights: weights.all.
 
 There are 5000 individuals and 10,000 SNPs. The first two columns of the phenotype and the covariate files have the family ID (FID) and individual ID (IID) of each individual. The phenotype file has a single phenotype and the covariate file has a single covariate. With the binary files, the GRM files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same.
 
