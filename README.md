@@ -19,7 +19,10 @@ The example data files provided are generated following the Section simulation s
 * GCTA GRM files: example_grm (.grm.id, .grm.bin, .grm.N.bin)
 * LD-based SNP-weights: weights.all
 
-There are 5000 individuals and 10,000 SNPs. The first two columns of the phenotype and the covariate files have the family ID (FID) and individual ID (IID) of each individual. The phenotype file has a single phenotype and the covariate file has a single covariate. With the binary files, the GRM files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same. The file "weights.all" contains the LD-based weights of every SNP computed using the software LDAK5. This file and the bed-format SNP genotype file are only used in the notebook, "PredLMM_notebook_with_GRM_computation_included".
+There are 5000 individuals and 10,000 SNPs. The first two columns of the phenotype and the covariate files have the family ID (FID) and individual ID (IID) of each individual. The phenotype file has a single phenotype and the covariate file has a single covariate. With the binary files, the GRM files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same.
+
+
+The file "weights.all" contains the LD-based weights of every SNP computed using the software LDAK5. This file and the bed-format SNP genotype file are only used in the notebook, "PredLMM_notebook_with_GRM_computation_included".
 
 
 ## Code Description
