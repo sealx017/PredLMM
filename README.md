@@ -2,9 +2,9 @@
 
 ## Notebook Description
 
-* The jupyter notebook titled as "PredLMM_notebook" contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The notebook reads the phenotype, covariates, and the GRM files and estimates heritability based on those. 
+* The jupyter notebook titled as "PredLMM_notebook" contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The notebook reads the phenotype, the covariate, and the GCTA GRM files and estimates heritability based on those. 
 
-* The PredLMM algorithm requires only a few particular blocks of the Genetic Relationship Matrix (GRM) and thus, computing the full GRM is not necessary. In the notebook named "PredLMM_notebook_with_GRM_computation_included", we explain how one can compute only the blocks of the GRM necessary for fitting the PredLMM algorithm and perform the subsequent analysis. We also allow incorporating user-specified SNP-weights e.g., LD-based weights computed using the software "LDAK5" into the estimation of the GRM-blocks.
+* The PredLMM algorithm requires only a few particular blocks of the Genetic Relationship Matrix (GRM) and thus, computing the full GRM is not necessary. In the notebook named "PredLMM_notebook_with_GRM_computation_included", we explain how one can compute only the blocks of the GRM necessary for fitting the PredLMM algorithm and perform the subsequent analysis. We also allow incorporating user-specified SNP-weights e.g., LD-based weights computed using the software LDAK5 into the estimation of the GRM-blocks.
 
 * The main module containing all the necessary python functions can be found inside the folder named "PredLMM". 
 
@@ -17,8 +17,9 @@ The example data files provided are generated following the Section simulation s
 * a covariate file: example_covar.csv
 * PLINK Binary files: example_geno (.bed, .bim, .fam)
 * GCTA GRM files: example_grm (.grm.id, .grm.bin, .grm.N.bin)
+* LD-based SNP-weights: weights.all
 
-There are 5000 individuals and 10,000 SNPs. The first two columns of the phenotype and the covariate files have the family ID (FID) and individual ID (IID) of each individual. The phenotype file has a single phenotype and the covariate file has one single covariate. With the binary files, Genetic Relationship Matrix (GRM) files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same.
+There are 5000 individuals and 10,000 SNPs. The first two columns of the phenotype and the covariate files have the family ID (FID) and individual ID (IID) of each individual. The phenotype file has a single phenotype and the covariate file has a single covariate. With the binary files, the GRM files have been computed using GCTA. It is to be craefully noted that the order of the individuals in all the files (phenotype, covariate, GRM) have to be the same. The file "weights.all" contains the LD-based weights of every SNP computed using the software LDAK5. This file and the bed-format SNP genotype file are only used in the notebook "PredLMM_notebook_with_GRM_computation_included".
 
 
 ## Code Description
