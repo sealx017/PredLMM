@@ -2,7 +2,11 @@
 
 ## Notebook Description
 
-The jupyter notebook titled as "PredLMM_notebook" contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The main module containing all the necessary python functions can be found inside the folder "PredLMM". The PredLMM algorithm uses only a few particular blocks of the Genetic Relationship Matrix (GRM) and thus, computing the full GRM is not necessary. In the notebook named "PredLMM_notebook_with_GRM_computation_included", we explain how one can compute only the blocks of the GRM necessary for fitting the PredLMM algorithm and perform the subsequent analysis. The function also allows incorporating user-specified SNP-weights e.g., LD-based weights computed using the software "LDAK5" into the estimation of the GRM-blocks.
+* The jupyter notebook titled as "PredLMM_notebook" contains all the steps for implementing PredLMM on an example dataset provided in "Data" folder. The notebook reads the phenotype, covariates, and the GRM files and estimates heritability based on those. 
+
+* The PredLMM algorithm requires only a few particular blocks of the Genetic Relationship Matrix (GRM) and thus, computing the full GRM is not necessary. In the notebook named "PredLMM_notebook_with_GRM_computation_included", we explain how one can compute only the blocks of the GRM necessary for fitting the PredLMM algorithm and perform the subsequent analysis. We also allow incorporating user-specified SNP-weights e.g., LD-based weights computed using the software "LDAK5" into the estimation of the GRM-blocks.
+
+* The main module containing all the necessary python functions can be found inside the folder named "PredLMM". 
 
 
 ## Data Description
